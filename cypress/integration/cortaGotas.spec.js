@@ -136,6 +136,7 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
                 .should('be.visible')
                 .contains('11un. grátis')
         });
+        
     context('Quando removo todas as garrafas de vinho da minha EvinoBOX', () => {
         beforeEach(() => {
             cy.get(':nth-child(1) > .CartTile > :nth-child(1) > .cwdKQS > .CartItemContentWrapper > .kJvUHU > .hZNxQG > .sc-bdVaJa')
@@ -148,7 +149,7 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
                 .click({force:true})
                 .log('Excluir produto')
 
-            cy.wait(2000)
+            cy.wait(2100)
         });
         
         it('Então devo visualizar uma mensagem Sua EvinoBOX está vazia', () => {
