@@ -1,0 +1,45 @@
+Cenário 1: Verificar quantidade de Corta gotas
+Dado que acesso o site da Evino
+Quando adiciono uma garrafa de vinho na minha EvinoBOX
+Então devo visualizar apenas um corta gotas na minha EvinoBOX
+
+Cenário 2: Verificar quantidade após adicionar um kit de garrafas de vinho
+Dado que possuo 1 garrafa em minha EvinoBOX
+Quando adiciono um kit de 10 garrafas de vinho na minha EvinoBOX
+Então devo visualizar onze corta gotas na minha EvinoBOX
+
+Cenário 3: Remover uma garrafa da minha EvinoBOX
+Dado que possuo 11 garrafas na minha EvinoBOX
+Quando removo 1 garrafa de vinho da minha EvinoBOX
+Então devo visualizar 10 corta gotas na minha EvinoBOX
+
+Cenário 4: Adicionar quatro kits simultâneamente
+Dado que possuo 10 garrafas de vinho na minha EvinoBOX
+Quando adiciono quatro kits com 10 garrafas de vinho cada um na minha EvinoBOX
+Então devo visualizar 50 corta gotas na minha EvinoBOX
+
+Cenário 5: Remover um kit da minha EvinoBOX
+Dado que possuo 50 garrafas de vinho na minha EvinoBOX
+Quando removo um kit de 10 garrafas de vinho da minha EvinoBOX
+Então devo visualizar 40 corta gotas na minha EvinoBOX
+
+Cenário 6: Adicionar 13 garrafas de vinhos avulsos da minha EvinoBOX
+Dado que possuo 40 garrafas de vinho na minha EvinoBOX
+Quando adiciono 13 garrafas de vinhos avulsos na minha EvinoBOX
+Então devo visualizar 53 corta gotas na minha EvinoBOX
+
+Cenário 7: Verificar quantidade de produtos no ícone da minha EvinoBOX
+Dado que possuo 17 itens e 53 corta gostas na minha EvinoBOX
+Quando visualizo o ícone da EvinoBOX
+Então devo visualizar o número de itens
+
+Cenário 8: Verificar quantidade de corta gotas ao passar o mouse sobre minha EvinoBOX
+Dado que possuo 17 itens e 53 corta gostas na minha EvinoBOX
+Quando passo o por cima do ícone da minha EvinoBOX
+Então devo visualizar a quantidade de corta gotas
+
+Cenário 9: Esvaziar minha EvinoBOX
+Dado que possuo 40 garrafas de vinho na minha EvinoBOX
+Quando removo todas as garrafas de vinho da minha EvinoBOX
+Então devo visualizar uma mensagem Sua EvinoBOX está vazia 
+
