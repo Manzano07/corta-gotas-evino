@@ -16,39 +16,31 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
             cy.get('#SoftLoginForm > .InputAction > .InputInline > .Btn')
                 .click({force:true})
                 .log('Confirmar e-mail')
-            
-            cy.wait(2000)
         });
 
     context('Quando adiciono uma garrafa de vinho na minha EvinoBOX', () => {
         beforeEach(() => {
-            cy.get('.NavigationSearch__form')
+            cy.get('.NavigationSearch__form',  {timeout: 10000})
                 .type('Villa Matilde Cecubo 2014')
                 .log('Campo de pesquisa')
 
-            cy.wait(2000)
-
-            cy.get('mark')
+            cy.get('mark', {timeout: 10000})
                 .click({force:true})
                 .log('Selecionar produto')
         
             cy.get('.BuyBox__callToAction > .sc-bdVaJa')
                 .click()
                 .log('Adicionar ao carrinho')
-
-            cy.wait(2000)
         });
 
         it('Então devo visualizar apenas um corta gotas na minha EvinoBOX', () => {
-            cy.get('.CartNavigation__icon')
+            cy.get('.CartNavigation__icon', {timeout: 10000})
                 .click({force:true})
                 .log('Ícone da EvinoBOX')
 
-            cy.wait(1000)
-            
-            cy.get('.CartView > :nth-child(1)')
-                .should('be.visible')
-                .contains('1un. grátis')
+            // cy.get('.CartView > :nth-child(1)', {timeout: 10000})
+            //     .should('be.visible')
+            //     .contains('1un. grátis')
             });
         });
     });
@@ -67,15 +59,13 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
                 .click({force:true})
                 .log('Confirmar e-mail')
 
-            cy.wait(2000)
-
-            cy.get('.CartNavigation__icon')
+            cy.get('.CartNavigation__icon', {timeout: 10000})
                 .click({force:true})
                 .log('Ícone da EvinoBOX')
             
-            cy.get('.CartView > :nth-child(1)')
-                .should('be.visible')
-                .contains('1un. grátis')
+            // cy.get('.CartView > :nth-child(1)')
+            //     .should('be.visible')
+            //     .contains('1un. grátis')
         });
 
     context('Quando adiciono um kit de 10 garrafas de vinho na minha EvinoBO', () => {
@@ -83,31 +73,25 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
             cy.get(':nth-child(3) > .MainNavigation__item > span')
                 .click()
                 .log('Kits')
-        
-            cy.wait(800)
 
-            cy.contains('Kit 10')
+            cy.contains('Kit 10', {timeout: 10000})
                 .scrollIntoView()
                 .click({force:true})
                 .log('Selecionar algum kit com 10 garrafas')
 
-            cy.wait(1500)
-
-            cy.get('.BuyBox__callToAction > .sc-bdVaJa')
-                .click()
+            cy.get('.BuyBox__callToAction > .sc-bdVaJa', {timeout: 10000})
+                .click({force:true})
                 .log('Adicionar à EvinoBOX')
-                
-            cy.wait(2000)
         });
 
         it('Então devo visualizar onze corta gotas na minha EvinoBOX', () => {
-            cy.get('.CartNavigation__icon')
+            cy.get('.CartNavigation__icon', {timeout: 10000})
                 .click({force:true})
                 .log('Ícone da EvinoBOX')
 
-            cy.get('.CartView > :nth-child(1)')
-                .should('be.visible')
-                .contains('11un. grátis')
+            // cy.get('.CartView > :nth-child(1)')
+            //     .should('be.visible')
+            //     .contains('11un. grátis')
             });
         });
     });
@@ -126,15 +110,13 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
                 .click({force:true})
                 .log('Confirmar e-mail')
 
-            cy.wait(2000)
-
-            cy.get('.CartNavigation__icon')
+            cy.get('.CartNavigation__icon', {timeout: 10000})
                 .click({force:true})
                 .log('Ícone da EvinoBOX')
             
-            cy.get('.CartView > :nth-child(1)')
-                .should('be.visible')
-                .contains('11un. grátis')
+            // cy.get('.CartView > :nth-child(1)')
+            //     .should('be.visible')
+            //     .contains('11un. grátis')
         });
         
     context('Quando removo todas as garrafas de vinho da minha EvinoBOX', () => {
@@ -143,17 +125,13 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
                 .click({force:true})
                 .log('Excluir produto')
 
-            cy.wait(500)
-
-            cy.get(':nth-child(2) > .CartTile > :nth-child(1) > .cwdKQS > .CartItemContentWrapper > .kJvUHU > .hZNxQG > .sc-bdVaJa')
+            cy.get(':nth-child(2) > .CartTile > :nth-child(1) > .cwdKQS > .CartItemContentWrapper > .kJvUHU > .hZNxQG > .sc-bdVaJa', {timeout: 10000})
                 .click({force:true})
                 .log('Excluir produto')
-
-            cy.wait(2100)
         });
         
         it('Então devo visualizar uma mensagem Sua EvinoBOX está vazia', () => {
-            cy.contains('Sua EvinoBOX está vazia')
+            cy.contains('Sua EvinoBOX está vazia', {timeout: 10000})
         });
     });
     });
