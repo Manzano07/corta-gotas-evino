@@ -68,7 +68,7 @@ describe('Validar cenários referentes a funcionalidade de Corta Gotas da Evino'
             //     .contains('1un. grátis')
         });
 
-    context('Quando adiciono um kit de 10 garrafas de vinho na minha EvinoBO', () => {
+    context('Quando adiciono um kit de 10 garrafas de vinho na minha EvinoBOX', () => {
         beforeEach(() => {
             cy.get(':nth-child(3) > .MainNavigation__item > span')
                 .click()
